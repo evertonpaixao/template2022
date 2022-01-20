@@ -24,12 +24,16 @@ $color-title: #fff;
 
 $color-link: #fff;
 
-$color-active: orange;
+$color-active: blue;
 
 $color-placeholder: orange;
 
-$scroll-color: green;
+$scroll-color-bg: black;
+$scroll-color-bg-thumb: red;
 $scroll-color-border: blue;
+
+$preloader-color-bg: white;
+$preloader-color-bg-loading: black;
 
 
 /*Theme*/
@@ -50,17 +54,18 @@ a {
     color: $color-active
 }
 
+
 /*Cor do Scroll*/
 body::-webkit-scrollbar {
     width: 12px;
 }
 
 body::-webkit-scrollbar-track {
-    background: $color-white;
+    background:  $scroll-color-bg;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: $scroll-color;
+    background-color: $scroll-color-bg-thumb;
     border-radius: 20px;
     border: 2px solid $scroll-color-border;
 }
@@ -73,7 +78,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 100%;
     z-index: 99999;
-    background:#fff;
+    background:$preloader-color-bg;
 }
 .preloader {
     display: block;
@@ -90,7 +95,7 @@ body::-webkit-scrollbar-thumb {
     width: 20px;
     height: 20px;
     border-radius: 20px;
-    background: #818f69;
+    background: $preloader-color-bg-loading;
     opacity: 0.5;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.9);
     animation: preloader 1.2s infinite ease-in-out;
@@ -118,7 +123,7 @@ animation-delay: 0.8s;
 @keyframes preloader {
     25% {
         opacity: 0.7;
-        background: $color-white;
+        background:  $preloader-color-bg;
     }
     50% {
         opacity: 1;
@@ -126,7 +131,7 @@ animation-delay: 0.8s;
     }
     75% {
         opacity: 0.7;
-        background: $color-green;
+        background:  $preloader-color-bg;
     }
 }
 
